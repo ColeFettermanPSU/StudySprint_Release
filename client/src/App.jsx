@@ -16,7 +16,9 @@ function App() {
     pauseTimer,
     resetTimer,
     completeTimer,
-    sessionMinutes
+    sessionMinutes,
+    elapsedTime,       // ✅ NEW
+    isCompleted        // ✅ NEW
   } = useTimer(1500);
 
   const [sessions, setSessions] = useState([]);
@@ -57,6 +59,9 @@ function App() {
     resetTimer();
   };
 
+  // ✅ CONVERT elapsed time to minutes
+  const actualMinutes = Math.floor(elapsedTime / 60);
+
   return (
     <div className="app">
       <header className="hero">
@@ -76,7 +81,8 @@ function App() {
 
         {readyToLog && (
           <SessionForm
-            minutes={sessionMinutes}
+            minutes={actualMinutes}   // ✅ FIXED
+            completed={isCompleted}  // ✅ OPTIONAL (if you use it)
             onSessionSaved={handleSessionSaved}
           />
         )}
