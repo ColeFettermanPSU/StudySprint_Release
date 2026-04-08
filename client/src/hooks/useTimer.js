@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 export default function useTimer(defaultSeconds = 1500) {
   const [timeLeft, setTimeLeft] = useState(defaultSeconds);
   const [isRunning, setIsRunning] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false);
   const hasFinishedRef = useRef(false);
 
   useEffect(() => {
@@ -13,6 +14,7 @@ export default function useTimer(defaultSeconds = 1500) {
         if (prev <= 1) {
           clearInterval(interval);
           hasFinishedRef.current = true;
+          setIsCompleted(true);
           setIsRunning(false);
           return 0;
         }
@@ -36,14 +38,17 @@ export default function useTimer(defaultSeconds = 1500) {
   const resetTimer = () => {
     setIsRunning(false);
     setTimeLeft(defaultSeconds);
+    setIsCompleted(false);
     hasFinishedRef.current = false;
   };
 
   const completeTimer = () => {
     setIsRunning(false);
-    setTimeLeft(0);
-    hasFinishedRef.current = true;
+    setIsCompleted(false);
+    hasFinishedRef.current = false;
   };
+
+  const elapsedTime = defaultSeconds - timeLeft;
 
   return {
     timeLeft,
@@ -53,6 +58,8 @@ export default function useTimer(defaultSeconds = 1500) {
     resetTimer,
     completeTimer,
     sessionMinutes: Math.floor(defaultSeconds / 60),
-    hasFinished: hasFinishedRef.current
+    hasFinished: hasFinishedRef.current,
+    isCompleted,
+    elapsedTime
   };
 }
