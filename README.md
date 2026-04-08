@@ -82,13 +82,23 @@ npm start
 
 ## Screenshots
 
-WIP
+### Timer Page
+
+![Timer](client/public/images/Timer.png)
+
+### Progress Tracking
+
+![Progress](client/public/images/Progress.png)
+
+### History View
+
+![History](client/public/images/History.png)
 
 ---
 
 ## Demo Video
 
-WIP
+*(Demo video will be added here if required)*
 
 ---
 
@@ -121,6 +131,8 @@ This project was developed collaboratively by:
 The project was built over several days of collaboration, including planning, development, and testing sessions conducted through Discord.
 
 Each team member contributed to different aspects of the application, including frontend development, backend functionality, and overall project structure.
+
+---
 
 ## Development Notes
 
