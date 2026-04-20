@@ -29,6 +29,36 @@ The purpose of Study Sprint is to:
 
 ---
 
+## Screenshots
+
+### Timer & Session Controls
+<p align="center">
+  <img src="images/timer.png" width="750">
+</p>
+
+---
+
+### Study Notes Input
+<p align="center">
+  <img src="images/notes.png" width="750">
+</p>
+
+---
+
+### Progress Graph
+<p align="center">
+  <img src="images/graph.png" width="750">
+</p>
+
+---
+
+### Session History
+<p align="center">
+  <img src="images/history.png" width="750">
+</p>
+
+---
+
 ## Features
 
 * Focus timer (start, pause, reset)
