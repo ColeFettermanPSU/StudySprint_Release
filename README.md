@@ -1,12 +1,12 @@
-# Study Sprint
+# Study Sprint (Penn State Edition)
 
 ---
 
 ## Overview
 
-Study Sprint is a full-stack web application designed to help users create and manage focused study sessions. The goal of this project is to provide a simple, clean, and functional tool for organizing study time and improving productivity.
+Study Sprint is a web-based study tracking application designed to help users create, manage, and visualize focused study sessions. 
 
-This project was developed as part of a full-stack web development course and demonstrates the integration of frontend and backend technologies into a working Minimum Viable Product (MVP).
+This version of the project has been adapted into a static web application and deployed using GitHub Pages, allowing for easy access and demonstration without requiring backend hosting.
 
 ---
 
@@ -16,107 +16,79 @@ The purpose of Study Sprint is to:
 
 * Help users track and manage study sessions
 * Provide a structured way to stay focused while studying
-* Serve as a foundation for a more advanced productivity tool in the future
+* Allow users to log session details such as subject and notes
+* Visually display progress using a session-based graph
 
 ---
 
 ## Technology Stack
 
-* Frontend: React (JavaScript, HTML, CSS)
-* Backend: Node.js with Express
-* Database: MongoDB
-* Version Control: GitHub
+* Frontend: HTML, CSS, JavaScript
+* Data Storage: Browser LocalStorage
+* Deployment: GitHub Pages
 
 ---
 
 ## Features
 
-* Create and manage study sessions
-* Store session data in a database
-* API routes for handling session data
-* Full-stack integration between frontend and backend
+* Focus timer (start, pause, reset)
+* Finish Session button to log completed sessions
+* Study notes input (major/subject and topic)
+* Extra notes for session details
+* Progress graph (bar chart of completed sessions)
+* Session history display
+* Local data persistence using browser storage
 
 ---
 
-## Installation and Setup
-
-### Clone the repository
-
-```bash
-git clone https://github.com/ColeFet2006/Study-Sprint.git
-cd Study-Sprint
-```
-
----
-
-### Backend Setup
-
-```bash
-cd server
-npm install
-```
-
-Create a `.env` file inside the `server` folder and add:
-
-```env
-MONGO_URI=your_mongodb_connection_string
-```
-
-Start the backend server:
-
-```bash
-npm start
-```
+## Project Structure
+StudySprint_Release/
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── images/
+└── penn-state-logo.png
 
 ---
 
-### Frontend Setup
+## How It Works
 
-```bash
-cd ../client
-npm install
-npm start
-```
-
----
-
-## Screenshots
-
-### Timer Page
-
-![Timer](client/public/images/Timer.png)
-
-### Progress Tracking
-
-![Progress](client/public/images/Progress.png)
-
-### History View
-
-![History](client/public/images/History.png)
+1. The user starts a study session using the timer
+2. After completing the session, the user clicks "Finish Session"
+3. The user enters study details (major, topic, notes)
+4. The session is saved in the browser using LocalStorage
+5. The progress graph updates with a new bar
+6. The session history is displayed below
 
 ---
 
-## Demo Video
+## Live Website
 
-(https://youtu.be/aKTZFsjSc0c?si=zzKgsx0u6YtOyPR2)
+
 
 ---
 
 ## Current Status
 
-This project is a basic but functional MVP. It includes core features and working full-stack integration.
+This project is a functional static MVP. It includes:
 
-The application is usable in its current state, with additional improvements planned based on future development and user needs.
+* A working timer system
+* Session tracking and logging
+* A visual progress graph
+* A clean and responsive interface
+
+The application is fully usable through GitHub Pages without requiring a backend server.
 
 ---
 
 ## Future Improvements
 
-* Improved UI and overall design
-* Additional session tracking features
+* Daily/weekly aggregated progress tracking
+* Improved UI and animations
 * User authentication system
-* Better responsiveness across devices
-* Deployment for public access
+* Cloud-based database integration
+* Enhanced mobile responsiveness
 
 ---
 
@@ -124,32 +96,23 @@ The application is usable in its current state, with additional improvements pla
 
 This project was developed collaboratively by:
 
-* Cole Fetterman - Full Stack Development (Frontend, Backend, Database Integration, and Core Application Logic)
-* Nelson Copete - Project Planning, Testing, and Feedback 
-* Zamman Qureshi - UI Ideas, Testing, and Feedback
+* Cole Fetterman - Project Structure, Integration, and Deployment
+* Nelson Copete - Styling, Layout Design, and UI Enhancements
+* Zamman Qureshi - JavaScript Logic, Timer Functionality, and Data Handling
 
-The project was built over several days of collaboration, including planning, development, and testing sessions conducted through Discord.
-
-Each team member contributed to different aspects of the application, including frontend development, backend functionality, and overall project structure.
+The project was built collaboratively with each member focusing on different components of the application.
 
 ---
 
 ## Development Notes
 
-During development, we experimented with deploying the application using server and hosting platforms. This process proved to be sensitive and required additional configuration beyond the scope of the core assignment.
+During development, the project transitioned from a full-stack application into a static version to simplify deployment and ensure reliability when hosted through GitHub Pages.
 
-As a result, some aspects of the project may extend beyond the minimum requirements. These additions were implemented intentionally to better understand full-stack deployment and to improve the overall structure of the application.
+LocalStorage was implemented to simulate backend functionality, allowing session data to persist without requiring a database.
 
-The current version is fully functional as an MVP, with additional improvements and refinements planned for future iterations.
-
----
-
-## Contact
-
-For any questions or feedback, please reach out.
+This approach ensured the project remained functional, accessible, and aligned with the goals of the assignment.
 
 ---
 
 ## Repository Link
 
-https://github.com/ColeFet2006/Study-Sprint
