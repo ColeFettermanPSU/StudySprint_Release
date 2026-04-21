@@ -90,7 +90,7 @@ StudySprint_Release/
 ## Live Demo
 
 Frontend (GitHub Pages):  
-https://colefettermanpsu.github.io/StudySprint_Release/
+https://ColeFettermanPSU.github.io/StudySprint_Release/
 
 ---
 
