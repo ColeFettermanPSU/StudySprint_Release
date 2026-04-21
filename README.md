@@ -6,7 +6,7 @@
 
 Study Sprint is a web-based study tracking application designed to help users create, manage, and visualize focused study sessions. 
 
-This version of the project has been adapted into a static web application and deployed using GitHub Pages, allowing for easy access and demonstration without requiring backend hosting.
+This version of the project includes both a static web application deployed using GitHub Pages and a full-stack implementation using Node.js, Express, and MongoDB.
 
 ---
 
@@ -24,8 +24,10 @@ The purpose of Study Sprint is to:
 ## Technology Stack
 
 * Frontend: HTML, CSS, JavaScript
-* Data Storage: Browser LocalStorage
-* Deployment: GitHub Pages
+* Backend: Node.js with Express
+* Database: MongoDB (via Mongoose)
+* Data Storage: LocalStorage (static demo) + MongoDB (full-stack version)
+* Deployment: GitHub Pages (frontend demo)
 
 ---
 
@@ -60,58 +62,72 @@ The purpose of Study Sprint is to:
 * Extra notes for session details
 * Progress graph (bar chart of completed sessions)
 * Session history display
-* Local data persistence using browser storage
+* Persistent data storage using MongoDB (full-stack version)
 
 ---
 
 ## Project Structure
+
 StudySprint_Release/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-└── images/
-└── penn-state-logo.png
+├── client/
+├── server/
+├── images/
+└── README.md
 
 ---
 
 ## How It Works
 
-1. The user starts a study session using the timer
-2. After completing the session, the user clicks "Finish Session"
-3. The user enters study details (major, topic, notes)
-4. The session is saved in the browser using LocalStorage
-5. The progress graph updates with a new bar
-6. The session history is displayed below
+1. The user starts a study session using the timer  
+2. After completing the session, the user clicks "Finish Session"  
+3. The user enters study details (major, topic, notes)  
+4. The frontend sends the data to an Express backend using API requests  
+5. The backend stores the data in MongoDB  
+6. The frontend retrieves stored data to update the graph and session history  
 
 ---
 
-## Live Website
+## Live Demo
 
+Frontend (GitHub Pages):  
 https://colefettermanpsu.github.io/StudySprint_Release/
+
+---
+
+## Full Stack Implementation
+
+In addition to the static GitHub Pages version, this project includes a full-stack implementation using Node.js, Express, and MongoDB.
+
+The frontend communicates with a backend API to:
+
+- Save study sessions  
+- Retrieve session history  
+- Delete stored sessions  
+
+Session data is stored in MongoDB, allowing for persistent storage beyond the browser.
+
+The full-stack version runs locally and demonstrates client-server communication and database integration.
 
 ---
 
 ## Current Status
 
-This project is a functional static MVP. It includes:
+This project is a functional MVP that includes both:
 
-* A working timer system
-* Session tracking and logging
-* A visual progress graph
-* A clean and responsive interface
+* A static frontend version hosted on GitHub Pages  
+* A full-stack implementation using Express and MongoDB  
 
-The application is fully usable through GitHub Pages without requiring a backend server.
+The static version demonstrates the UI and core functionality, while the full-stack version provides persistent data storage and API-based interaction.
 
 ---
 
 ## Future Improvements
 
-* Daily/weekly aggregated progress tracking
-* Improved UI and animations
-* User authentication system
-* Cloud-based database integration
-* Enhanced mobile responsiveness
+* Daily/weekly aggregated progress tracking  
+* Improved UI and animations  
+* User authentication system  
+* Cloud-based database integration  
+* Enhanced mobile responsiveness  
 
 ---
 
@@ -121,7 +137,7 @@ This project was developed collaboratively by:
 
 - Cole Fetterman — Project Structure, Integration, and Deployment  
 - Nelson Copete — Styling, Layout Design, and UI Enhancements  
-- Zamman Qureshi — JavaScript Logic, Timer Functionality, and Data Handling  
+- Zamman Qureshi — JavaScript Logic, Timer Functionality, and Backend Integration  
 
 Development was conducted collaboratively through group sessions over Discord, where all team members worked together in real time on the project.
 
@@ -131,11 +147,11 @@ While each member was assigned primary responsibilities, all components of the p
 
 ## Development Notes
 
-During development, the project transitioned from a full-stack application into a static version to simplify deployment and ensure reliability when hosted through GitHub Pages.
+During development, the project evolved from a static frontend application into a full-stack web application.
 
-LocalStorage was implemented to simulate backend functionality, allowing session data to persist without requiring a database.
+The GitHub Pages version serves as a frontend demonstration using LocalStorage, while the full-stack implementation integrates an Express backend and MongoDB database for persistent data storage.
 
-This approach ensured the project remained functional, accessible, and aligned with the goals of the assignment.
+This approach allowed the project to remain accessible online while also meeting full-stack development requirements.
 
 ---
 
@@ -144,30 +160,3 @@ This approach ensured the project remained functional, accessible, and aligned w
 https://github.com/ColeFettermanPSU/StudySprint_Release
 
 ---
-
-## 📝 Development Logs
-
-### Cole Fetterman
-- **v1.0 (Apr 17, 2026):** Created initial project structure and directory layout  
-- **v1.1 (Apr 18, 2026):** Built main HTML structure and integrated core sections  
-- **v1.2 (Apr 19, 2026):** Connected timer, notes form, graph, and history components  
-- **v1.3 (Apr 20, 2026):** Configured GitHub repository and deployed via GitHub Pages  
-- Assisted with debugging and final feature integration across all components  
-
----
-
-### Nelson Copete
-- **v1.0 (Apr 17, 2026):** Designed initial UI layout and visual structure  
-- **v1.1 (Apr 18, 2026):** Implemented Penn State themed color scheme and base styling  
-- **v1.2 (Apr 19, 2026):** Styled timer, forms, graph, and navigation elements  
-- **v1.3 (Apr 20, 2026):** Improved responsiveness and overall UI consistency  
-- Contributed to design adjustments and user experience improvements  
-
----
-
-### Zamman Qureshi
-- **v1.0 (Apr 17, 2026):** Implemented base timer logic (countdown functionality)  
-- **v1.1 (Apr 18, 2026):** Added timer controls (start, pause, reset)  
-- **v1.2 (Apr 19, 2026):** Developed session saving system using LocalStorage  
-- **v1.3 (Apr 20, 2026):** Built dynamic progress graph and session history rendering  
-- Assisted with debugging and ensuring proper data handling throughout the application 
